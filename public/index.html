@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🎓 Student Management System</h1>
+        <p>Manage your student records easily</p>
+    </header>
+
+    <section class="form-card">
+        <h2>Student Registration</h2>
+
+        <form id="studentForm">
+            <input type="hidden" id="studentId">
+
+            <input type="text" id="name"
+                placeholder="Enter Student Name" required>
+
+            <input type="email" id="email"
+                placeholder="Enter Email Address" required>
+
+            <input type="tel" id="phone"
+                placeholder="Enter Phone Number"
+                pattern="[0-9]{10}" maxlength="10" required>
+
+            <select id="department" required>
+                <option value="">Select Department</option>
+                <option value="CSE">CSE</option>
+                <option value="IT">IT</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">MECH</option>
+            </select>
+
+            <select id="year" required>
+                <option value="">Select Year</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+            </select>
+
+            <button type="submit" id="submitBtn">
+                Register Student
+            </button>
+        </form>
+
+        <p id="message"></p>
+    </section>
+
+    <section class="table-card">
+        <h2>Student Records</h2>
+
+        <input type="text" id="search"
+            placeholder="🔍 Search by name, email or department">
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Department</th>
+                        <th>Year</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentList"></tbody>
+            </table>
+        </div>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
